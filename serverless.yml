@@ -1,0 +1,17 @@
+service: hotnews
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  headlines:
+    handler: dist/headlines.send
+    events:
+      - schedule: rate(1 day)
+  sportitalia:
+    handler: dist/sportitalia.send
+    events:
+      - schedule: rate(1 day)
+plugins:
+  - serverless-offline
