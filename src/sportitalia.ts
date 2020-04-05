@@ -1,12 +1,12 @@
 import { News } from './Interfaces/INews';
-import axios, { AxiosInstance } from 'axios';
+import axios from 'axios';
 import dotenv from 'dotenv';
 import Telegraf from 'telegraf';
 
 dotenv.config();
 
 export const send = async (): Promise<void> => {
-  const apiClient: AxiosInstance = axios.create({
+  const apiClient = axios.create({
     baseURL: 'http://newsapi.org/v2/',
     responseType: 'json',
     headers: {

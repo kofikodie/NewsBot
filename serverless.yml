@@ -8,10 +8,18 @@ functions:
   headlines:
     handler: dist/headlines.send
     events:
-      - schedule: rate(1 day)
+      - schedule: cron(0 8 * * ? *)
   sportitalia:
     handler: dist/sportitalia.send
     events:
-      - schedule: rate(1 day)
+      - schedule: cron(0 9 * * ? *)
+  sportuk:
+    handler: dist/sportuk.send
+    events:
+      - schedule: cron(30 9 * * ? *)
+  business:
+    handler: dist/business.send
+    events:
+      - schedule: cron(30 8 * * ? *)
 plugins:
   - serverless-offline
