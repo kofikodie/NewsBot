@@ -13,10 +13,12 @@ functions:
     handler: dist/sportitalia.send
     events:
       - schedule: cron(0 9 * * ? *)
+      - schedule: cron(30 14 * * ? *)
   sportuk:
     handler: dist/sportuk.send
     events:
       - schedule: cron(30 9 * * ? *)
+      - schedule: cron(30 18 * * ? *)
   business:
     handler: dist/business.send
     events:
