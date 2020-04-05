@@ -1,5 +1,5 @@
 import { News } from './Interfaces/INews';
-import axios, {AxiosError, AxiosResponse} from 'axios';
+import axios, { AxiosError, AxiosResponse } from 'axios';
 import dotenv from 'dotenv';
 import Telegraf from 'telegraf';
 import queryString from 'query-string';
@@ -25,7 +25,7 @@ export const send = async (): Promise<void> => {
   try {
     const response = await apiClient.get<News>(
       `top-headlines?${queryString.stringify(
-        { country: 'it', pageSize: 5, apiKey: 9 },
+        { country: 'it', pageSize: 5, apiKey: process.env.NEWS_API },
         { sort: false },
       )}`,
     );

@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint . --ext .ts",
     "build": "npm run lint && tsc",
-    "dev": "npm run build && sls invoke local --function headlines",
+    "dev": "npm run build && sls invoke local --function business",
     "deploy": "npm run build && sls deploy"
   },
   "keywords": [],
