@@ -25,7 +25,7 @@ export const send = async (): Promise<void> => {
   try {
     const response = await apiClient.get<News>(
       `top-headlines?${queryString.stringify(
-        { country: 'it', pageSize: 5, apiKey: process.env.NEWS_API },
+        { country: 'it', pageSize: 2, apiKey: process.env.NEWS_API },
         { sort: false },
       )}`,
     );

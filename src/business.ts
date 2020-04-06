@@ -27,8 +27,7 @@ export const send = async (): Promise<void> => {
       `top-headlines?${queryString.stringify(
         {
           category: 'business',
-          country: 'it',
-          pageSize: 5,
+          pageSize: 2,
           apiKey: process.env.NEWS_API,
         },
         { sort: false },
