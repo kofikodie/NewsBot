@@ -9,8 +9,8 @@ functions:
     handler: dist/headlines.send
     events:
       - schedule: cron(0 8 * * ? *)
-  sportitalia:
-    handler: dist/sportitalia.send
+  tech:
+    handler: dist/tech.send
     events:
       - schedule: cron(0 9 * * ? *)
       - schedule: cron(30 14 * * ? *)
